@@ -1,0 +1,11 @@
+.posts {
+  margin: 0 auto;
+  max-width: 800px;
+
+  &__search {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 16px;
+    margin: 50px 0;
+  }
+}
