@@ -11,7 +11,8 @@
     </v-list>
     <v-pagination
       v-if="paginationLength"
-      v-model="page"
+      :value="currentPage"
+      @input="setPage($event)"
       :length="paginationLength"
       class="mt-4 mb-8"
     ></v-pagination>
@@ -48,6 +49,17 @@ export default Vue.extend({
     },
     paginationLength(): number {
       return Math.ceil(this.posts.length / this.postOnPage);
+    },
+    currentPage(): number {
+      if (this.page > this.paginationLength) {
+        return 1;
+      }
+      return this.page;
+    },
+  },
+  methods: {
+    setPage(page: number) {
+      this.page = page;
     },
   },
 });
