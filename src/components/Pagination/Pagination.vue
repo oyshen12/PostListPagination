@@ -16,7 +16,7 @@
       :length="paginationLength"
       class="mt-4 mb-8"
     ></v-pagination>
-    <div v-else class="post__empty">Ничего не найлено :(</div>
+    <div v-else class="post__empty">Ничего не найдено :(</div>
   </div>
 </template>
 
