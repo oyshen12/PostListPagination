@@ -49,9 +49,6 @@ export default Vue.extend({
     paginationLength(): number {
       return Math.ceil(this.posts.length / this.postOnPage);
     },
-    pageComp(): number {
-      return this.paginationLength;
-    },
   },
 });
 </script>
