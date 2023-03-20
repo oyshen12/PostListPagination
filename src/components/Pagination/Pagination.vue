@@ -44,7 +44,7 @@ export default Vue.extend({
       if (this.posts.length <= this.postOnPage) {
         return this.posts;
       }
-      const index = this.page * this.postOnPage;
+      const index = this.currentPage * this.postOnPage;
       return this.posts.slice(index - this.postOnPage, index);
     },
     paginationLength(): number {
